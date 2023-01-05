@@ -1,0 +1,153 @@
+.leaflet-bar {
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);
+    border-radius: 5px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #000;
+}
+
+main {
+    height: auto;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    z-index: 9999;
+    right: 0;
+
+}
+
+.hud {
+    position: absolute;
+    /* top:0;
+    left: 25%; */
+    right: 0;
+    bottom: 0;
+    z-index: 99999;
+}
+
+.hud-weather .dis {
+    display: block;
+    margin-left: 5%;
+}
+
+.hud-weather {
+    display: flex;
+    background: transparent;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 2em;
+    color: snow;
+    margin-top: .25em;
+    font-size: .7em;
+}
+
+.hud-weather::before {
+    content: " ";
+    background: #000;
+    opacity: .2;
+    width: 100%;
+    height: 3.33333em;
+
+    position: absolute;
+}
+
+.log#log-weather {
+    display: inline;
+    color: #000;
+    display: inline;
+    color: #000;
+    width: 100%;
+    text-align: left;
+    margin-left: 2em;
+}
+
+.log#log-address {
+    display: inline-block;
+    color: cornflowerblue;
+    width: 100%;
+    text-align: left;
+    margin-left: 2em;
+
+}
+
+.ldBarEnable {
+    display: block;
+}
+
+canvas {
+    height: 30em;
+    opacity: .75;
+    bottom: 3em;
+    position: fixed;
+    left: 0;
+    z-index: 9999999;
+}
+
+.ldBar {
+    position: relative;
+}
+
+.ldBar.label-center > .ldBar-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-shadow: 0 0 3px #fff;
+}
+
+.ldBar-label:after {
+    content: "%";
+    display: inline;
+}
+
+.ldBar.no-percent .ldBar-label:after {
+    content: "";
+}
+
+#preloader {
+
+    background: #000 url('../images/loader.gif') no-repeat center center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 99999999;
+    background-size: 75%;
+
+}
+
+#log {
+    background: antiquewhite;
+    color: blue;
+    padding: 0 10px;
+}
+
+.leaflet-map-pane svg {
+    font-size: 2em;
+}
+
+.ldMeter .ldBar-label:after {
+    content: "kmh";
+    font-size: 0.6em;
+}
+
+.temperatureBar .ldBar-label:after {
+    content: "°C";
+    font-size: 0.6em;
+}
+
+.windspeedBar .ldBar-label:after {
+    content: "W";
+    font-size: .6em;
+}
