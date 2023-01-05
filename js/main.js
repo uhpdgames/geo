@@ -194,11 +194,13 @@ setTimeout(function () {
         }
     };
 
-    map.addControl(new L.Control.Search(mobileOpts));
+    //map.addControl(new L.Control.Search(mobileOpts));
     //view source of search.php for more details
 
     map.addControl(new L.Control.Zoom());
 
+    sleep(4500);
+    hiddenLoading();
 }, 1000);
 
 
@@ -314,6 +316,7 @@ function mylog(data = '') {
 }
 
 var is_google_statellite = false;
+
 function updateTitlePlanet() {
     if (map.hasLayer(googleSat)) {
         map.addLayer(googleStreets);
@@ -572,10 +575,6 @@ async function addGeoJson(url, icon) {
 
 var loader = document.getElementById('preloader');
 var hud_text = document.getElementById('hud_text');
-
-window.addEventListener('load', function () {
-    hiddenLoading();
-})
 
 function showLoading() {
     loader.style.display = "block";
@@ -839,9 +838,11 @@ var is_showing_ads = false;
 function showing_ads() {
     if (is_showing_ads == false) {
         is_showing_ads = true;
+        document.getElementById('text-ads').classList.remove('text-running');
         document.getElementById('text-ads').style.display = 'none';
         document.getElementById('icon-ads').innerHTML = '<ion-icon name="add-circle-outline"></ion-icon>';
     } else {
+        document.getElementById('text-ads').classList.add('text-running');
         document.getElementById('text-ads').style.display = 'block';
         is_showing_ads = false;
         document.getElementById('icon-ads').innerHTML = '<ion-icon name="heart-dislike-outline"></ion-icon>';

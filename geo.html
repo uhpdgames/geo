@@ -48,37 +48,39 @@
             </div>
         </div>
 
-        <div class="hud-weather">
-            <span class="dis"></span>
-            <div
-                    data-preset="fan"
-                    class="ldBar label-center temperatureBar"
-                    data-precision="0.1"
-                    id="temperatureBar"
-            ></div>
+        <div class="hud-weather hud-text_content">
+            <p class="wp">
+                <span class="dis"></span>
+                <div
+                        data-preset="fan" style="width: 20em;"
+                        class="ldBar label-center temperatureBar"
+                        data-precision="0.1"
+                        id="temperatureBar"
+                ></div>
 
-            <div class="log" id="log-weather">
+                <div class="log" id="log-weather">
 
-            </div>
-            <div class="log" id="log-address">
+                </div>
+                <div class="log" id="log-address">
 
-            </div>
+                </div>
 
-            <div class="ldBar ldBarEnable" id="ldBarEnable"  data-value="100"   data-preset="text"></div>
+                <div class="ldBar ldBarEnable" id="ldBarEnable" style="width: 25em;" data-value="100" data-preset="text"></div>
 
-            <div
-                    data-preset="energy" id="windspeedBar"
-                    class="ldBar label-center windspeedBar"data-precision="0.01"
-                    data-value="35"
-            ></div>
+                <div
+                        data-preset="energy" id="windspeedBar" style="width: 20em;"
+                        class="ldBar label-center windspeedBar" data-precision="0.01"
+                        data-value="35"
+                ></div>
 
-            <div
-                    data-preset="circle"
-                    class="ldBar label-center ldMeter"
-                    data-value="0"
-                    style="width: 10em;stroke-width: 10"
-            ></div>
-            <span class="dis"></span>
+                <div
+                        data-preset="fan"
+                        class="ldBar label-center ldMeter"
+                        data-value="0"
+                        style="width: 20em;stroke-width: 10"
+                ></div>
+                <span class="dis"></span>
+            </p>
         </div>
     </div>
 </header>
@@ -182,7 +184,7 @@
             <!--todo menu-->
             <li class="list active">
                 <a href="javascript:void(0)" onclick="toggleFullScreen();">
-                    <span class="icon" ><ion-icon name="scan-circle-outline"></ion-icon></span>
+                    <span class="icon"><ion-icon name="scan-circle-outline"></ion-icon></span>
                     <span class="text">toggle Full</span></a>
             </li>
             <li class="list ">
@@ -193,14 +195,7 @@
                     <span class="text">HAGIANG</span>
                 </a>
             </li>
-            <li class="list ">
-                <a href="javascript:void(0);" onclick="showing_endline();">
-                <span class="icon" id="icon-end">
-                <ion-icon name="trending-down-outline"></ion-icon>
-                </span>
-                    <span class="text">HAGIANG</span>
-                </a>
-            </li>
+
         </ul>
     </div>
 
